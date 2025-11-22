@@ -47,24 +47,51 @@ Developers should reference these tokens instead of hard-coding hex values.
 
 ---
 
-## Swatches
+## Token reference (with swatches)
 
-### Text & Background
+Below are the core system colours with a small preview swatch next to each hex value.
 
-| Token | Sample | Hex |
-|---|---:|---|
-| `--kz-color-text-primary` | <div style="width:40px;height:20px;background:#1f2933;border:1px solid #ddd;"></div> | `#1f2933` |
-| `--kz-color-text-muted` | <div style="width:40px;height:20px;background:#6b7280;border:1px solid #ddd;"></div> | `#6b7280` |
-| `--kz-color-bg-surface` | <div style="width:40px;height:20px;background:#f5f5f5;border:1px solid #ddd;"></div> | `#f5f5f5` |
+### Text & background
 
-### Accents & States
+- `--kz-color-text-primary` – `#1f2933`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#1f2933;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
 
-| Token | Sample | Hex |
-|---|---:|---|
-| `--kz-color-accent-primary` | <div style="width:40px;height:20px;background:#005ea5;border:1px solid #ddd;"></div> | `#005ea5` |
-| `--kz-color-success` | <div style="width:40px;height:20px;background:#00703c;border:1px solid #ddd;"></div> | `#00703c` |
-| `--kz-color-warning` | <div style="width:40px;height:20px;background:#ffbf47;border:1px solid #ddd;"></div> | `#ffbf47` |
-| `--kz-color-danger` | <div style="width:40px;height:20px;background:#d4351c;border:1px solid #ddd;"></div> | `#d4351c` |
+- `--kz-color-text-muted` – `#6b7280`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#6b7280;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-text-inverse` – `#ffffff`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#ffffff;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-bg-page` – `#ffffff`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#ffffff;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-bg-surface` – `#f5f5f5`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#f5f5f5;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+### Borders
+
+- `--kz-color-border-subtle` – `#d4d4d8`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#d4d4d8;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-border-strong` – `#6b7280`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#6b7280;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+### Accents & states
+
+- `--kz-color-accent-primary` – `#005ea5`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#005ea5;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-accent-on-primary` – `#ffffff`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#ffffff;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-success` – `#00703c`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#00703c;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-warning` – `#ffbf47`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#ffbf47;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
+
+- `--kz-color-danger` – `#d4351c`
+  <span style="display:inline-block;width:1.2em;height:1.2em;background:#d4351c;border:1px solid #ddd;margin-left:0.5em;vertical-align:middle;"></span>
 
 Swatches are for visual reference only — components must still use semantic tokens.
 
@@ -141,15 +168,18 @@ The design system remains framework-agnostic while implementation details can ev
 
 ---
 
-## Implementation notes: token-driven swatches
+## Implementation notes
 
-Currently, swatches are defined manually in this page.
+Currently:
+
+- Token definitions live in CSS.
+- Swatches are defined manually in this page.
 
 In future, we can:
 
 - Move token definitions into a data file (for example `_data/colours.yml`).
-- Use the data file to **auto-generate swatch tables**, ensuring documentation always reflects the latest tokens.
-- Use a single source of truth for:
+- Use the data file to auto-generate the token reference list with swatches.
+- Keep a single source of truth for:
   - token name,
   - hex value,
   - and usage notes.
@@ -157,7 +187,7 @@ In future, we can:
 Until that automation exists, any change to a colour token should update:
 
 1. The token definition in CSS.
-2. The corresponding swatch entry in this page.
+2. The corresponding entry in this page.
 
 ---
 
