@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Design System
+description: A protoype design system
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://simplybenuk.github.io/ui-foundations-prototype/
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
